@@ -18,7 +18,7 @@ GET    | /auth/check      | YES   | Auth Token check         | -                
 
 METHOD | ENDPOINT        | TOKEN | DESCRIPTION                   | POST PARAMS                                                      | RETURNS
 -------|-----------------|-------|-------------------------------|------------------------------------------------------------------|--------------------------------
-GET    | /user/profile   | YES   | Shows registered user profile |  -                                                               | name, surname, username, email, pets, Geolocation, avatar
+GET    | /user/profile   | YES   | Shows registered user profile |  -                                                               | name, surname, username, pets, location, role, comment, booking, pictures
 PUT    | /user/profile   | YES   | Update user profile           | name, surname, username, email, pets, Geolocation, avatar, role  | updated user data
 DELETE | /user/profile   | YES   | Deletes user profile          | password                                                         | confirmation of deleted user
 
@@ -45,5 +45,5 @@ DELETE | /user/host/profile   | YES   | Deletes user profile          | password
 
 METHOD | ENDPOINT         | TOKEN | DESCRIPTION                     | PARAMS                                          | RETURNS
 -------|------------------|-------|---------------------------------|-------------------------------------------------|----------------------------
-GET    | /users           | YES   | Finds host by geolocation       | query: search string                            | list of matching hosts
+GET    | /users           | YES   | Finds host by location          | query: search string                            | list of matching hosts
 GET    | /users/:userid   | YES   | Get user profile                | username                                        | user profile
