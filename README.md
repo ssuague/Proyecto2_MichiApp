@@ -23,27 +23,10 @@ PUT    | /user/profile   | YES   | Update user profile           | name, surname
 DELETE | /user/profile   | YES   | Deletes user profile          | password                                                         | confirmation of deleted user
 
 
-### Cate Profile Endpoints
-
-METHOD | ENDPOINT            | TOKEN | DESCRIPTION                   | POST PARAMS                                          | RETURNS
--------|-------------|-------|-------------------------------|--------------------------------------------------------------|--------------------------------
-GET    | /user/cat/profile   | YES   | Shows registered user profile |  -                                                   | name, age, avatar, comments, star, sociable, special, picture, race
-PUT    | /user/cat/profile   | YES   | Update user profile           | name, age, avatar, sociable, special, picture, race  | updated cat data
-DELETE | /user/cat/profile   | YES   | Deletes user profile          | password                                             | confirmation of deleted cat
-
-
-### Host Profile Endpoints
-
-METHOD | ENDPOINT             | TOKEN | DESCRIPTION                   | POST PARAMS                                     | RETURNS
--------|----------------------|-------|-------------------------------|-------------------------------------------------|--------------------------------
-GET    | /user/host/profile   | YES   | Shows registered user profile |  -                                              | username, email, address, house_type, star, picture, comments, services, pet_house_share, prices
-PUT    | /user/host/profile   | YES   | Update user profile           | username, email, address, house_type, star, picture, comments, services, pet_house_share, prices  | updated user data
-DELETE | /user/host/profile   | YES   | Deletes user profile          | password                                        | confirmation of deleted user
-
-
 ### User Endpoints
 
 METHOD | ENDPOINT         | TOKEN | DESCRIPTION                     | PARAMS                                          | RETURNS
 -------|------------------|-------|---------------------------------|-------------------------------------------------|----------------------------
-GET    | /users           | YES   | Finds host by location          | query: search string                            | list of matching hosts
+GET    | /users           | YES   | Finds host and professional by location          | query: search string                            | list of matching hosts
 GET    | /users/:userid   | YES   | Get user profile                | username                                        | user profile
+POST    | /user/pets      | YES   | Create pet profile              | -                                               |
