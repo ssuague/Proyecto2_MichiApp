@@ -30,7 +30,26 @@ METHOD | ENDPOINT         | TOKEN | DESCRIPTION                     | PARAMS    
 GET    | /users           | YES   | Finds host and professional by location          | query: search string           | list of matching hosts
 GET    | /users/:userid   | YES   | Get user profile                | username                                        | user profile
 POST    | /user/pets      | YES   | Create pet profile              | name, specie, sociable, race                    | object with new pet id, name, specie, sociable, race
-PUT    | /user/:petid   | YES   | Update pet profile           |                                           | updated pet data
-DELETE | /user/:petid   | YES   | Delete pet profile          | password                                                         | confirmation of deleted user
+PUT    | /user/:petid     | YES   | Update pet profile              | name, specie, sociable, race, picture           | updated pet data
+DELETE | /user/:petid     | YES   | Delete pet profile              | password                                        | confirmation of deleted pet
+
+### ADMIN-User Endpoints
+
+METHOD | ENDPOINT         | TOKEN | DESCRIPTION                     | PARAMS                                          | RETURNS
+-------|------------------|-------|---------------------------------|-------------------------------------------------|----------------------------
+PUT    | /users/:userid   | YES   | Update comment, rating, picture  | userid,                                        | updated user data
+DELETE | /users/:userid   | YES   | Delete user profile              | userid,                                        | confirmation of deleted user
+
+
+### HOST and PROFESSIONAL-User Endpoints
+
+METHOD | ENDPOINT         | TOKEN | DESCRIPTION                     | PARAMS                                          | RETURNS
+-------|------------------|-------|---------------------------------|-------------------------------------------------|----------------------------
+GET    | /users           | YES   | Finds host and professional by location          | query: search string           | list of matching hosts
+GET    | /users/:userid   | YES   | Get user profile                | username                                        | user profile
+POST    | /user/pets      | YES   | Create pet profile              | name, specie, sociable, race                    | object with new pet id, name, specie, sociable, race
+PUT    | /user/:petid     | YES   | Update pet profile              | name, specie, sociable, race, picture           | updated pet data
+
+
 
 
